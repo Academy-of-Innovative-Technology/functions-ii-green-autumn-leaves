@@ -19,3 +19,16 @@ function handleBasicOperation(type) {
 }
 
 // Math Formula Handlers
+
+
+
+
+function Theorem(a,b) {
+    const result = document.querySelector("#pythagoreanResult");
+    result.textContent = `Calculate the hypotenuse ${a} + ${b} = ${Math.sqrt(a ** 2 + b ** 2)}`;
+
+}
+
+document.querySelector(".theoremBtn").addEventListener("click", function(){
+    Theorem(a,b)
+});
