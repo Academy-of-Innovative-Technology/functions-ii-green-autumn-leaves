@@ -24,11 +24,11 @@
           </div>
         </div>
         <div class="row g-2 mb-3">
-          <div class="col"><button class="btn btn-primary w-100">Add (+)</button></div>
-          <div class="col"><button class="btn btn-secondary w-100">Subtract (-)</button></div>
-          <div class="col"><button class="btn btn-success w-100">Multiply (*)</button></div>
-          <div class="col"><button class="btn btn-warning w-100">Divide (/)</button></div>
-          <div class="col"><button class="btn btn-danger w-100">Modulus (%)</button></div>
+          <div class="col"><button class="btn btn-primary addBtn w-100">Add (+)</button></div>
+          <div class="col"><button class="btn btn-secondary restBtn w-100">Subtract (-)</button></div>
+          <div class="col"><button class="btn btn-success multBtn w-100">Multiply (*)</button></div>
+          <div class="col"><button class="btn btn-warning divideBtn w-100">Divide (/)</button></div>
+          <div class="col"><button class="btn btn-danger percentBtn w-100">Modulus (%)</button></div>
         </div>
         <div class="alert alert-info" id="basicResult">Result will appear here</div>
       </div>
@@ -46,13 +46,13 @@
           <div class="col"><input id="rectLength" type="number" class="form-control" placeholder="Length"></div>
           <div class="col"><input id="rectWidth" type="number" class="form-control" placeholder="Width"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Area</button>
+        <button class="btn btn-outline-primary rectangleBtn mb-2">Calculate Area</button>
         <div class="alert alert-light" id="rectResult"></div>
 
         <!-- Circle Area -->
         <h5 class="mt-4">2. Area of Circle (π × r²)</h5>
         <input id="circleRadius" type="number" class="form-control mb-2" placeholder="Radius">
-        <button class="btn btn-outline-primary mb-2">Calculate Area</button>
+        <button class="btn btn-outline-primary areaBtn mb-2">Calculate Area</button>
         <div class="alert alert-light" id="circleResult"></div>
 
         <!-- Pythagorean Theorem -->
@@ -61,7 +61,7 @@
           <div class="col"><input id="sideA" type="number" class="form-control" placeholder="Side A"></div>
           <div class="col"><input id="sideB" type="number" class="form-control" placeholder="Side B"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Hypotenuse</button>
+        <button class="btn btn-outline-primary theoremBtn mb-2">Calculate Hypotenuse</button>
         <div class="alert alert-light" id="pythagoreanResult"></div>
 
         <!-- Simple Interest -->
@@ -71,7 +71,7 @@
           <div class="col"><input id="rate" type="number" class="form-control" placeholder="Rate %"></div>
           <div class="col"><input id="time" type="number" class="form-control" placeholder="Time (yrs)"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Interest</button>
+        <button class="btn btn-outline-primary calculateBtn mb-2">Calculate Interest</button>
         <div class="alert alert-light" id="interestResult"></div>
 
         <!-- Power -->
@@ -80,7 +80,7 @@
           <div class="col"><input id="base" type="number" class="form-control" placeholder="Base"></div>
           <div class="col"><input id="exponent" type="number" class="form-control" placeholder="Exponent"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Power</button>
+        <button class="btn btn-outline-primary powerBtn mb-2">Calculate Power</button>
         <div class="alert alert-light" id="powerResult"></div>
 
         <!-- More Formulas -->
@@ -92,13 +92,13 @@
           <div class="col"><input id="periLength" type="number" class="form-control" placeholder="Length"></div>
           <div class="col"><input id="periWidth" type="number" class="form-control" placeholder="Width"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Perimeter</button>
+        <button class="btn btn-outline-primary perimeterBtn mb-2">Calculate Perimeter</button>
         <div class="alert alert-light" id="perimeterResult"></div>
 
         <!-- Circumference -->
         <h5 class="mt-4">7. Circumference of Circle (2πr)</h5>
         <input id="circRadius" type="number" class="form-control mb-2" placeholder="Radius">
-        <button class="btn btn-outline-primary mb-2">Calculate Circumference</button>
+        <button class="btn btn-outline-primary circleBtn mb-2">Calculate Circumference</button>
         <div class="alert alert-light" id="circumferenceResult"></div>
 
         <!-- Triangle Area -->
@@ -107,12 +107,12 @@
           <div class="col"><input id="triangleBase" type="number" class="form-control" placeholder="Base"></div>
           <div class="col"><input id="triangleHeight" type="number" class="form-control" placeholder="Height"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Area</button>
+        <button class="btn btn-outline-primary calcAreaBtn mb-2">Calculate Area</button>
         <div class="alert alert-light" id="triangleAreaResult"></div>
 
         <!-- Volume of Cube -->
         <h5 class="mt-4">9. Volume of Cube (side³)</h5>
-        <input id="cubeSide" type="number" class="form-control mb-2" placeholder="Side">
+        <input id="cubeSide" type="number" class="form-control cubeBtn mb-2" placeholder="Side">
         <button class="btn btn-outline-primary mb-2">Calculate Volume</button>
         <div class="alert alert-light" id="cubeVolumeResult"></div>
 
@@ -123,7 +123,7 @@
           <div class="col"><input id="prismWidth" type="number" class="form-control" placeholder="Width"></div>
           <div class="col"><input id="prismHeight" type="number" class="form-control" placeholder="Height"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Volume</button>
+        <button class="btn btn-outline-primary prismBtn mb-2">Calculate Volume</button>
         <div class="alert alert-light" id="prismVolumeResult"></div>
 
         <!-- Volume of Cylinder -->
@@ -132,7 +132,7 @@
           <div class="col"><input id="cylRadius" type="number" class="form-control" placeholder="Radius"></div>
           <div class="col"><input id="cylHeight" type="number" class="form-control" placeholder="Height"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Volume</button>
+        <button class="btn btn-outline-primary cylinderBtn mb-2">Calculate Volume</button>
         <div class="alert alert-light" id="cylinderVolumeResult"></div>
 
         <!-- Speed -->
@@ -141,7 +141,7 @@
           <div class="col"><input id="distance" type="number" class="form-control" placeholder="Distance"></div>
           <div class="col"><input id="time" type="number" class="form-control" placeholder="Time"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Speed</button>
+        <button class="btn btn-outline-primary speedBtn mb-2">Calculate Speed</button>
         <div class="alert alert-light" id="speedResult"></div>
 
         <!-- Density -->
@@ -159,7 +159,7 @@
           <div class="col"><input id="weight" type="number" class="form-control" placeholder="Weight (kg)"></div>
           <div class="col"><input id="height" type="number" class="form-control" placeholder="Height (m)"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate BMI</button>
+        <button class="btn btn-outline-primary bmiBtn mb-2">Calculate BMI</button>
         <div class="alert alert-light" id="bmiResult"></div>
 
         <!-- Quadratic Discriminant -->
@@ -169,7 +169,7 @@
           <div class="col"><input id="b" type="number" class="form-control" placeholder="b"></div>
           <div class="col"><input id="c" type="number" class="form-control" placeholder="c"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Discriminant</button>
+        <button class="btn btn-outline-primary discriminantBtn mb-2">Calculate Discriminant</button>
         <div class="alert alert-light" id="discriminantResult"></div>
 
       </div>
@@ -178,6 +178,6 @@
 
   <!-- Bootstrap JS Bundle (Optional but useful for future additions) -->
   <script src="js/bootstrap.bundle.min.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
