@@ -234,7 +234,7 @@ document.querySelector(".densityBtn").addEventListener("click", function() {
   const volume = parseFloat(document.getElementById("volume").value);
   Density(mass, volume);
 });
-
+ 
 
 
 function BMI(weight, height) {
@@ -269,4 +269,4 @@ document.querySelector(".discriminantBtn").addEventListener("click", function() 
     const b = parseFloat(document.getElementById("quadB").value);
     const c = parseFloat(document.getElementById("quadC").value);
     QuadraticDiscriminant(a, b, c);
-});
+});  
