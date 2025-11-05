@@ -216,25 +216,30 @@ function Speed(distance, time){
 }
 
 document.querySelector(".speedBtn").addEventListener("click", function(){
-    const distance = parseFloat(document.getElementById("distance").value);
-    const time = parseFloat(document.getElementById("time").value);
+    const distance = parseFloat(document.getElementById("distance1").value);
+    const time = parseFloat(document.getElementById("time1").value);
     Speed(distance, time);
 });
 
 
 
-function Density(mass, volume) {
-  const result = document.getElementById("densityResult");
-  const density = mass / volume;
-  result.textContent = `The density for a mass of ${mass} and a volume of ${volume} is ${density.toFixed(2)}.`;
+
+function DensintyR(mass, volume){
+    const result = document.getElementById("densityResult");
+    if (time === 0){
+        result.textContent = "Volume cannot be 0!";
+        return;
+    }
+
+    const d = mass / volume;
+    result.textContent = ` The density of an object with a mass of ${mass} and a volume of ${volume} is equal to = ${d.toFixed(2)}. `;
 }
 
-document.querySelector(".densityBtn").addEventListener("click", function() {
-  const mass = parseFloat(document.getElementById("mass").value);
-  const volume = parseFloat(document.getElementById("volume").value);
-  Density(mass, volume);
-});
- 
+ document.querySelector(".densityBtn").addEventListener("click", function(){
+    const mass = parseFloat(document.getElementById("mass1").value);
+    const volume = parseFloat(document.getElementById("volume1").value);
+    DensintyR(mass,volume);
+ });
 
 
 function BMI(weight, height) {
@@ -250,8 +255,8 @@ function BMI(weight, height) {
 }
 
 document.querySelector(".bmiBtn").addEventListener("click", function() {
-    const weight = parseFloat(document.getElementById("weight").value);
-    const height = parseFloat(document.getElementById("height").value);
+    const weight = parseFloat(document.getElementById("weight1").value);
+    const height = parseFloat(document.getElementById("height1").value);
     BMI(weight, height);
 });
 
@@ -265,8 +270,8 @@ function QuadraticDiscriminant(a, b, c) {
 }
 
 document.querySelector(".discriminantBtn").addEventListener("click", function() {
-    const a = parseFloat(document.getElementById("quadA").value);
-    const b = parseFloat(document.getElementById("quadB").value);
-    const c = parseFloat(document.getElementById("quadC").value);
+    const a = parseFloat(document.getElementById("a1").value);
+    const b = parseFloat(document.getElementById("b1").value);
+    const c = parseFloat(document.getElementById("c1").value);
     QuadraticDiscriminant(a, b, c);
 });  
